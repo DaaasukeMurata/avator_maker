@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Maker - Render Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Avatar Maker</h1>
+            <p>名前やキーワードを入力してオリジナルアバターを生成しよう！</p>
+        </header>
+
+        <main>
+            <form id="avatarForm" class="form-container">
+                <div class="input-group">
+                    <label for="name">名前:</label>
+                    <input type="text" id="name" placeholder="あなたの名前を入力" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="keywords">キーワード（カンマ区切り）:</label>
+                    <input type="text" id="keywords" placeholder="猫,青,メガネ" required>
+                </div>
+                
+                <button type="submit" class="generate-btn">アバターを生成</button>
+            </form>
+
+            <div id="avatarResult" class="avatar-container" style="display: none;">
+                <h2>あなたのアバター</h2>
+                <div id="avatarDisplay"></div>
+                <button id="downloadBtn" class="download-btn">SVGをダウンロード</button>
+                <button id="regenerateBtn" class="regenerate-btn">再生成</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>🚀 Powered by Render - GitHubにプッシュするだけで自動デプロイ！</p>
+        </footer>
+    </div>
+
+    <script src="avatar-generator.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
